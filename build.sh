@@ -30,7 +30,7 @@ function make_kernel() {
   echo -e "$cyan***********************************************"
   echo -e "             Building kernel          "
   echo -e "***********************************************$nocol"
-  PATH=~/Desktop/tools/toolchain/linux-x86-android-9.0.0_r1-clang-4691093/bin:~/Desktop/tools/toolchain/aarch64-linux-android-4.9/bin:${PATH} \
+  PATH=~/Desktop/tools/toolchain/linux-x86/clang-r353983c/bin:~/Desktop/tools/toolchain/aarch64-linux-android-4.9/bin:${PATH} \
   make -j$(nproc --all) O=../out \
                       ARCH=arm64 \
                       CC=clang \
