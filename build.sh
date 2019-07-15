@@ -16,10 +16,10 @@ DEVICE="VKY"
 FINAL_ZIP=$KERNEL_NAME-$VERSION-$DATE-$DEVICE.zip
 
 # Dirs
-KERNEL_DIR=~/Desktop/Code_Opensource
-OUT_DIR=~/Desktop/out
-UPLOAD_DIR=~/Desktop/Files/flash_zip
-KERNEL_IMG=~/Desktop/out/arch/arm64/boot/Image.gz
+KERNEL_DIR=~/Compile/Code_Opensource
+OUT_DIR=~/Compile/out
+UPLOAD_DIR=~/Compile/Files/flash_zip
+KERNEL_IMG=~/Compile/out/arch/arm64/boot/Image.gz
 
 # Make kernel
 function make_kernel() {
@@ -30,7 +30,7 @@ function make_kernel() {
   echo -e "$cyan***********************************************"
   echo -e "             Building kernel          "
   echo -e "***********************************************$nocol"
-  PATH=~/Desktop/tools/toolchain/linux-x86/clang-r353983c/bin:~/Desktop/tools/toolchain/aarch64-linux-android-4.9/bin:${PATH} \
+  PATH=~/tools/toolchain/linux-x86/clang-r353983c/bin:~/tools/toolchain/aarch64-linux-android-4.9/bin:${PATH} \
   make -j$(nproc --all) O=../out \
                       ARCH=arm64 \
                       CC=clang \
